@@ -8,7 +8,7 @@
   </div>
   <div class ="post-like-section">
     <p><%= post.text %></p>
-    <%= form_with model: @like, url: like_path, method: :post do |f| %>
+ <%= form_with model: @like, url: user_post_likes_path(post_id: post.id) do |f| %>
       <%= f.submit "Like"%>
     <%end%>
   </div>
