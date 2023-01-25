@@ -11,7 +11,7 @@
   <% end %>
 </div>
 <div class='comment-container'>
-<%= form_with model: @comment, url: post_path, method: :post, scope: :comment do |f| %>
+<%= form_with model: @comment, url: user_post_comments_path(post_id: @post) do |f|  %>
   <div class = "comment-section">
     <%= f.text_area :text, placeholder: "Add Comment" %>
   </div>
