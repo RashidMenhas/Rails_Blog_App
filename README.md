@@ -34,7 +34,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 
-# 📖Blog App <a name="about-project"></a>
+# 📖Rails Blog App <a name="about-project"></a>
 
 > Blog is a rails app. In this app we can add blog, comments to the blog and likes posts.
 
