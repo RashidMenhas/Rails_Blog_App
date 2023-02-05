@@ -22,21 +22,22 @@ class PostsController < ApplicationController
     redirect_to post_path if @like.save
   end
 
-  def create 
+  def create
     @post = Post.new(post_params)
     @post.author = current_user
     @post.likes_counter = 0
     @post.comments_counter = 0
     return unless @post.save
+
     redirect_to posts_new_path
-    flash[:success] = "Post have been saved successfully."
+    flash[:success] = 'Post have been saved successfully.'
   end
 
-  def new 
+  def new
     @post = Post.new
   end
 
-  private 
+  private
 
   def post_params
     params.require(:post).permite(:title, :text)
@@ -45,5 +46,4 @@ class PostsController < ApplicationController
   def comment_params
     params.require(:comment).permite(:text)
   end
-
 end
