@@ -12,7 +12,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 
-- [📖 My Blog App](#My Blog-App)
+- [📖 My Blog App](#Rails Blog-App)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
