@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h2><b>Blog App</b></h2>
+  <h2><b>Rails Blog App</b></h2>
 
 </div>
 
