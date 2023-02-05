@@ -3,4 +3,10 @@
   <% @user.each do |user| %>
     <%= render "user", user: user %>
   <% end %>
-  </section>
+
+  <div class="create-post">
+    <%= link_to create_post_path do %>
+      <button class="btn-create-post">create post</button>
+    <%end%>
+  </div>
+</section>
