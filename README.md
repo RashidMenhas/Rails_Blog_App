@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h2><b>Blog App</b></h2>
+  <h2><b>Rails Blog App</b></h2>
 
 </div>
 
@@ -12,7 +12,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 
-- [📖 My Blog App](#My Blog-App)
+- [📖 My Blog App](#Rails Blog-App)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -34,9 +34,9 @@
 <!-- PROJECT DESCRIPTION -->
 
 
-# 📖Blog App <a name="about-project"></a>
+# 📖Rails Blog App <a name="about-project"></a>
 
-> Blog is a rails app. In this app we can add blog, comments to the blog and likes posts.
+> Rails Blog app is a rails app. In this app we can add blog, comments to the blog and likes posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
