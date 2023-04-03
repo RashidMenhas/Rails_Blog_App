@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-def index
-end
+  def index; end
 
-def show 
+  def show
     params[:user_id]
-end
+  end
 end
