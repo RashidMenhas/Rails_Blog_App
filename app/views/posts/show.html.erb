@@ -1,6 +1,6 @@
 <% content_for :title, "#{@user.name}'s Posts"%>
 <%= render "posts/user_post", post: @post %>
-<div class= "post-comments mt-4 border-2 border-gray-400">
+<div class= "post-comments">
   <% @post.comments.each do |comment| %>
     <div class="post-comment">
       <p>

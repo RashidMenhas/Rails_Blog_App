@@ -1,22 +1,24 @@
-<% content_for :title, "#{@user.name}'s Posts " %>
-<%= render "users/user", user: @user %>
-<% @user.posts.each do | post | %>
-  <%= link_to user_post_path(@user, post) do %>
-    <%= render "post", post: post %>
-    <div class="user-post-comments mt-2">
-      <h3 class="text-xl">
-        <span class="underline decoration-wavy decoration-slate-500">Comments</span>
-        <span>For Post: </span>
-        <span class="text-blue-gray-600 underline decoration-red-400"><%= "#{post.title}"%></span>
-      </h3>
-      <% post.recent_five.each do |comment| %>
-        <div class='post-comment'>
-          <p>
-            <span><strong><%= comment.author.name %></strong></span>
-            <span><%= comment.text %></span>
-          </p>
-        </div>
-      <%end%>
-    </div>
+<section class="post-section">
+  <% content_for :title, "#{@user.name}'s Posts " %>
+  <%= render "users/user", user: @user %>
+  <% @user.posts.each do | post | %>
+    <%= link_to user_post_path(@user, post) do %>
+      <%= render "post", post: post %>
+      <div class="user-post-comments">
+        <h3 class="text-xl">
+          <span class="comments">Comments</span>
+          <span>for Post: </span>
+          <span class="comment-title"><%= "#{post.title}"%></span>
+        </h3>
+        <% post.recent_five.each do |comment| %>
+          <div class='post-comment'>
+            <p>
+              <span><strong><%= comment.author.name %></strong></span>
+              <span><%= comment.text %></span>
+            </p>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
   <%end%>
-<%end%>
+</section>
