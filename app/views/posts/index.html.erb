@@ -1,2 +1,24 @@
-<h2>Post#index</h2>
-<p>Here are ALL Posts for a given user you are in '/users/user_id/posts'</p>
+<section class="post-section">
+  <% content_for :title, "#{@user.name}'s Posts " %>
+  <%= render "users/user", user: @user %>
+  <% @user.posts.each do | post | %>
+    <%= link_to user_post_path(@user, post) do %>
+      <%= render "post", post: post %>
+      <div class="user-post-comments">
+        <h3 class="text-xl">
+          <span class="comments">Comments</span>
+          <span>for Post: </span>
+          <span class="comment-title"><%= "#{post.title}"%></span>
+        </h3>
+        <% post.recent_five.each do |comment| %>
+          <div class='post-comment'>
+            <p>
+              <span><strong><%= comment.author.name %></strong></span>
+              <span><%= comment.text %></span>
+            </p>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
+  <%end%>
+</section>
