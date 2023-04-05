@@ -8,9 +8,23 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
+
+ <!-- Load Tailwind Play CDN-->
+    <%= javascript_include_tag 'https://cdn.tailwindcss.com' %>
+    <%= javascript_include_tag 'tailwind.config.js' %>
+
+    <!-- Load Material Tailwind from Creative Tim-->
+    <!-- stylesheet -->
+    <%= stylesheet_link_tag "https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" %>
+    <!-- script -->
+    <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js' %>
+
+
 
   <body>
+  <%= link_to 'HOME', root_path, class:'mr-8' %>
+  <%= link_to 'Back', 'javascript:history.back()' %>
     <%= yield %>
+    <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js' %>  
   </body>
 </html>
