@@ -1,0 +1,11 @@
+<%= link_to user_path(user) do %>
+<li class= "user ml-2 mt-4 flex items-center gap-12">
+<div class = "user-image">
+<%= image_tag user.photo, alt: "#{user.name}-avatar", class:'w-40 h-36 object-cover object-center rounded-[50%]' %>
+</div>
+<div class="user-info w-12/12 border border-red flex flex-col">
+<h3 class='username text-3xl ml-2'><%= user.name %>
+<span class='self-end mr-2'><%= user.posts_counter%></span>
+</div>
+</li>
+<%end%>
