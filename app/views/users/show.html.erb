@@ -1,2 +1,19 @@
-<h1>Users#show</h1>
-<p>Here is a single User, you are in '/users/id'</p>
+<% content_for :title, "#{@user.name}'s - Blog" %>
+<section  class="flex flex-col w-[55%]">
+  <%= render "user", user: @user %>
+  <div class = "bio border-2 border-blue-gray" >
+    <h3>Bio</h3>
+    <p><%= @user.bio%></p>
+  </div>
+  
+  <% @user.recent_three.each do |post| %>
+    <%= link_to user_post_path(@user, post) do %>
+      <%= render "posts/post", post: post %>
+    <%end%>
+  <%end%>
+
+  <%= link_to user_posts_path(@user), class: 'self-center' do %>
+  <button type='button' class= "see-all-posts mt-4 button text-white bg-gradient-to-r from-blue-500 to-blue-200 border-2 hover:border-blue-400 hover:text-blue-400 hover:from-white hover:to-white"">See all posts</button>
+  <%end%>
+
+</section>
