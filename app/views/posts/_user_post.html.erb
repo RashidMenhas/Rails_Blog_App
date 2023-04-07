@@ -6,5 +6,10 @@
       <span>Likes: <%= post.likes_counter %></span>
     </aside>
   </div>
-  <p><%= post.text %></p>
+  <div class ="post-like-section">
+    <p><%= post.text %></p>
+    <%= form_with model: @like, url: like_path, method: :post do |f| %>
+      <%= f.submit "Like"%>
+    <%end%>
+  </div>
 </div>
