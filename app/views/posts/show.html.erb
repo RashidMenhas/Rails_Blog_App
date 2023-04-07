@@ -10,3 +10,9 @@
     </div>
   <% end %>
 </div>
+<%= form_with model: @comment, url: post_path, method: :post, scope: :comment do |f| %>
+  <div class = "comment-section">
+    <%= f.text_area :text, placeholder: "Add Comment" %>
+    <%= f.submit "Comment" %>
+  </div>
+<% end %>
