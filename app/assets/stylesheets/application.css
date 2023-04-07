@@ -112,3 +112,101 @@ a {
   margin: 20px;
   border: 1px solid black;
 }
+.create-post {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-create-post {
+  background-color: rgb(66, 66, 245);
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  color: aliceblue;
+}
+.parent-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50vh;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post-like-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.comment-section {
+  width: 20%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+
+.create-post {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-post {
+  background-color: #4CAF50;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-post:hover {
+  background-color: #4d5fff;
+}
+
+.text-input {
+  display: block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.home:hover {
+  background-color: #4d5fff;
+  padding: 0.5rem;
+  color: aliceblue;
+  border-radius: 0.2rem;
+}
+
+.back:hover {
+  background-color: #4d5fff;
+  padding: 0.5rem;
+  color: aliceblue;
+  border-radius: 0.2rem;-color: #4d5fff;
+}
