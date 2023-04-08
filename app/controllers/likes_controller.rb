@@ -4,9 +4,9 @@ class LikesController < ApplicationController
   end
 
   def create
-    @like = Like.new(author: current_user, post: Post.find(params[:id]))
+    @like = Like.new(author: current_user, post: Post.find(params[:post_id]))
     return unless @like.save
-
-    redirect_to user_post_path(@user.id, @post.id)
+    @user = User.find(current_user.id)
+    redirect_to user_post_path(@user.id, params[:post_id])
   end
 end
