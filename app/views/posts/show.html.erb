@@ -10,3 +10,11 @@
     </div>
   <% end %>
 </div>
+<div class='comment-container'>
+<%= form_with model: @comment, url: user_post_comments_path(post_id: @post) do |f|  %>
+  <div class = "comment-section">
+    <%= f.text_area :text, placeholder: "Add Comment" %>
+  </div>
+   <%= f.submit "Comment", class:'btn-comment'%>
+<% end %>
+</div>

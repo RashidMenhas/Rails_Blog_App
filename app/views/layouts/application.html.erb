@@ -23,8 +23,8 @@
 
   <body>
   <div class = "nav-bar">
-  <%= link_to 'HOME', root_path, class:'mr-8' %>
-  <%= link_to 'Back', 'javascript:history.back()' %>
+  <%= link_to 'HOME', root_path, class:'mr-8 home' %>
+  <%= link_to 'BACK', 'javascript:history.back()', class:'back' %>
    </div>
     <%= yield %>
     <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js' %>  

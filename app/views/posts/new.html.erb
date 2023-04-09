@@ -1,0 +1,15 @@
+<div class = "parent-container">
+<div class = "post-container">
+<% if flash[:success] %>
+ <div class="notice"><%= flash[:success] %></div>
+<% end %>
+  <h1>Create New Post</h1>
+<%= form_with model: @post, url: user_posts_path do |f|  %>
+    <div class = "column">
+      <%= f.text_field :title, placeholder: "Title of post", class: "text-input" %>
+      <%= f.text_area :text, placeholder: 'Descript of post', class: "text-input" %>
+      <%= f.submit class: "btn-post"%>
+    </div>
+  <% end %>
+</div>
+</div>
