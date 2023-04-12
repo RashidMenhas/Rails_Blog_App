@@ -24,4 +24,7 @@ RSpec.describe 'User index', type: :feature do
     click_link @author2.name
     expect(current_path).to match user_path(@author2)
   end
+  it 'displays the usernames of all other users' do
+    expect(page.body).to include(@author2.name)
+  end
 end
