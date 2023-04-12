@@ -49,7 +49,7 @@ RSpec.describe 'Post Index', type: :feature do
     expect(page).to have_content(@second_post.text)
   end
 
-  it 'shows the comments on a post like (Thank you for your support 😊)' do
+  it 'shows the comments on a post like (Thank you for your support)' do
     expect(page).to have_content(@com1.text)
     expect(page).to have_content(@com2.text)
     expect(page).to have_content(@com3.text)
