@@ -33,7 +33,6 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-
 # 📖Rails Blog App <a name="about-project"></a>
 
 > Rails Blog app is a rails app. In this app we can add blog, comments to the blog and likes posts.
@@ -109,19 +108,20 @@ Clone this repository to your desired folder:
  - rails db:migrate
 
 ```
+
 ### Usage
 
 To run the project, execute the following command:
 
 - rails server
-     or
+  or
 - rails s
 
 ### Run tests
 
 - rspec.
 
-### Check Linter 
+### Check Linter
 
 - rubocop
 
@@ -137,11 +137,15 @@ To run the project, execute the following command:
 
 👤 **Rashid Menhas**
 
-
 - GitHub: [![RashidMenhas](https://img.shields.io/badge/-RashidMenhas-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/RashidMenhas)
 - Twitter: [![Rashid Menhas](https://img.shields.io/badge/-RashidMenhas-blue?logo=Twitter&logoColor=skyBlue&style=plastic)](https://twitter.com/RashidM83664789)
 - LinkedIn: [![Rashid Menhas](https://img.shields.io/badge/-RashidMenhas-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://www.linkedin.com/in/rashid-menhas/)
 
+👤 **Wilson Kimiri**
+
+- GitHub: [@githubhandle](https://github.com/willy836)
+- Twitter: [@twitterhandle](https://twitter.com/Kimiri836)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/wilson-kimiri/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +154,7 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Enhance design.**
-- **Connect to the Database.** 
+- **Connect to the Database.**
 - **Add API endpoits.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -180,7 +184,6 @@ If you like this project you can fork it easily.
 I would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2fBhB9EiwAWqHK6s-2-x4d57Pghz47XT1BgsYuF81ZprM-k-IwzI0_L96nV0SQ93A8ExoCVnQQAvD_BwE" title="planet icons">Microvers for giving me this opportunity to build this project</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
