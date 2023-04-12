@@ -16,7 +16,7 @@ RSpec.describe 'Post Index', type: :feature do
                            text: 'Hello there Cassian, this Dero I am watching you')
     @com3 = Comment.create(author: @author, post: @second_post, text: 'Spend the credits wisely :|')
 
-    25.times do |n|
+    25.times do |_n|
       Post.create(author: @author, title: 'Selam from', text: 'This is my first post')
     end
 
@@ -26,7 +26,7 @@ RSpec.describe 'Post Index', type: :feature do
     click_link 'See all posts'
   end
 
-  it "returns paginated posts" do
+  it 'returns paginated posts' do
     expect(page).to have_http_status(200)
     expect(page.body).to include('This is my first post')
   end
