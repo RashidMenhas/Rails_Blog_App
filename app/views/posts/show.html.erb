@@ -1,7 +1,7 @@
 <% content_for :title, "#{@user.name}'s Posts"%>
 <%= render "posts/user_post", post: @post %>
 <div class= "post-comments">
-  <% @post.comments.each do |comment| %>
+  <% @comments.each do |comment| %>
     <div class="post-comment">
       <p>
         <span><strong><%= comment.author.name%></strong></span>
