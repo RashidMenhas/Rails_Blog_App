@@ -226,3 +226,76 @@ a {
   color: aliceblue;
   border-radius: 0.2rem;
 }
+
+.parent {
+  position: relative;
+  margin-top: 10%;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 300px) {
+  .parent {
+    position: relative;
+    margin-top: 20%;
+  }
+
+  .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.nav-border {
+  width: 100vw;
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      #ff0000,
+      #ffff00,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #ff00ff
+    )
+    10;
+  border-radius: 12px;
+}
+
+.border {
+  border: 10px solid transparent; /* set border width and make it transparent */
+  border-image: linear-gradient(
+      to right,
+      #ff0000,
+      #ffff00,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #ff00ff
+    )
+    10; 
+  padding: 20px;
+  margin-top: 50%;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  .parent {
+    position: relative;
+    margin-top: 10%;
+  }
+
+  .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
