@@ -10,7 +10,7 @@
           <span>for Post: </span>
           <span class="comment-title"><%= "#{post.title}"%></span>
         </h3>
-        <% post.recent_five.each do |comment| %>
+        <% post.recent_five.includes([:author]).each do |comment| %>
           <div class='post-comment'>
             <p>
               <span><strong><%= comment.author.name %></strong></span>
