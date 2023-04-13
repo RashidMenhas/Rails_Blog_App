@@ -5,28 +5,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-
- <!-- Load Tailwind Play CDN-->
+    <!-- Load Tailwind Play CDN-->
     <%= javascript_include_tag 'https://cdn.tailwindcss.com' %>
     <%= javascript_include_tag 'tailwind.config.js' %>
-
     <!-- Load Material Tailwind from Creative Tim-->
     <!-- stylesheet -->
     <%= stylesheet_link_tag "https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" %>
     <!-- script -->
     <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js' %>
-
-
-
-  <body>
-  <div class = "nav-bar">
-  <%= link_to 'HOME', root_path, class:'mr-8 home' %>
-  <%= link_to 'BACK', 'javascript:history.back()', class:'back' %>
-   </div>
-    <%= yield %>
-    <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js' %>  
-  </body>
-</html>
+    <body>
+      <div class ='nav-border'>
+        <div class="nav-bar">
+          <%= link_to "HOME", root_path, class: "mr-8 home" %>
+          <div class="button-section">
+            <% if current_user %>
+              <h4>Welcome: <%= current_user.name %></h4>
+              <%= button_to "Sign out", destroy_user_session_path, method: :delete %> <% end %>
+            <%= link_to "BACK", "javascript:history.back()", class:'back' %>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <p class="notice">
+          <%= notice %>
+        </p>
+        <p class="alert">
+          <%= alert %>
+        </p>
+      </div>
+      <%= yield %>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <%= javascript_include_tag 'https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js' %>
+    </body>
+  </html>
