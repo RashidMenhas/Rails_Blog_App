@@ -1,0 +1,20 @@
+<div class= 'parent'>
+  <div class= 'child'>
+    <div class = 'border'>
+      <h2>Resend confirmation instructions</h2>
+      <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:'Email Here!', class:'text-input form-control form-control-lg',
+     value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        </div>
+        <br/>
+        <div class="actions">
+          <%= f.submit "Resend confirmation instructions", class:'btn btn-outline-primary' %>
+        </div>
+      <% end %>
+      <br/>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
